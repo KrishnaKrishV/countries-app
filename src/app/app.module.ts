@@ -7,9 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { CountriesComponent } from './countries/countries.component';
 import { CountryNameComponent } from './country-name/country-name.component';
 import { CountriesListComponent } from './countries-list/countries-list.component';
-import { EmployeeComponent } from './employee/employee.component';
-import { EmployeeidComponent } from './employeeid/employeeid.component';
-
 
 @NgModule({
   declarations: [
@@ -17,8 +14,6 @@ import { EmployeeidComponent } from './employeeid/employeeid.component';
     CountriesComponent,
     CountryNameComponent,
     CountriesListComponent,
-    EmployeeComponent,
-    EmployeeidComponent
   ],
   imports: [
     BrowserModule,

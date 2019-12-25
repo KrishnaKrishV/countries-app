@@ -2,9 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CountriesComponent } from './countries/countries.component';
 import { CountriesListComponent } from './countries-list/countries-list.component';
-import { CountryNameComponent } from './country-name/country-name.component';
-import { EmployeeComponent } from './employee/employee.component';
-import { EmployeeidComponent } from './employeeid/employeeid.component';
 
 
 const routes: Routes = [
@@ -17,12 +14,8 @@ const routes: Routes = [
     component: CountriesListComponent
   },
   {
-    path: 'employee',
-    component:EmployeeComponent
-  },
-  {
-    path: 'employeeid',
-    component :EmployeeidComponent
+    path: 'employees',
+    loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule),
   },
   {
     path: '',
