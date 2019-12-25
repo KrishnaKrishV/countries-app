@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { reject } from 'q';
 @Injectable({
   providedIn: 'root'
 })
@@ -24,6 +23,4 @@ export class CountriesService {
   getEmployeeData(){
     return this.http.get("http://dummy.restapiexample.com/api/v1/employees").toPromise()
   }
-
-  
 }

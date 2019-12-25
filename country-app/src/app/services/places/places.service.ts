@@ -21,16 +21,6 @@ export class PlacesService {
     };
     return this.http.get<PlaceSuggestionResponse>(url, { params }).toPromise();
   }
-  getPosition():Promise<any> {
-    return new Promise((resolve,reject) => {
-      navigator.geolocation.getCurrentPosition(response => {
-        resolve({longitude:response.coords.longitude, latitude: response.coords.latitude})
-      },
-      err => {
-        reject(err);
-      })
-    })
-  }
 
   getDetails() {
 

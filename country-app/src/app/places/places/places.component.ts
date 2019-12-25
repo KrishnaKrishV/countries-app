@@ -15,9 +15,7 @@ export class PlacesComponent implements OnInit {
 
   constructor(
     private placesServ: PlacesService
-  ) { 
-    this.placesServ.getPosition().then(position => console.log(position.longitude, position.latitude))
-   }
+  ) { }
 
   ngOnInit() {
     this.listenPlaceInputs();
