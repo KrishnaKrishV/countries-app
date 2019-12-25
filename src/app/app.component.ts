@@ -8,22 +8,21 @@ import { CountriesService } from './services/countries.service';
 })
 export class AppComponent {
   title = 'countries';
-  data: any = [];
-  show = false;
-  constructor(private cs: CountriesService) {
-    this.onLoad();
+  // data: any = [];
+  // show = false;
+  constructor() {
   }
 
-   async onLoad() {
-    try {
-      this.data = await this.cs.getAllCountries().then(res => this.data = res);
-      console.log(this.data);
+  //  async onLoad() {
+  //   try {
+  //     this.data = await this.cs.getAllCountries().then(res => this.data = res);
+  //     console.log(this.data);
 
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  onClick() {
-    this.show = !this.show;
-  }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
+  // onClick() {
+  //   this.show = !this.show;
+  // }
 }
