@@ -1,11 +1,10 @@
 <div class="places-container">
     <div>
-        <input [formControl]="searchCtrl" type="search">
+        <input class="body"  [formControl]="searchCtrl" type="search">
     </div>
 
     <!-- Suggestions -->
 
- <section class="body">
     <div class="place-suggestions">
         <div *ngFor="let suggestion of suggestions" >
             <p style="margin: 0;">
@@ -16,5 +15,5 @@
             </p>
         </div>
     </div>
- </section>
+ 
 </div>
